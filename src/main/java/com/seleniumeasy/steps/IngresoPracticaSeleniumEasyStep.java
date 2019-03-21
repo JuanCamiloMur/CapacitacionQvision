@@ -1,7 +1,6 @@
 package com.seleniumeasy.steps;
 
 import com.seleniumeasy.pages.IngresoPracticaSeleniumEasyPage;
-import com.seleniumeasy.utils.EnumEjercicios;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 
@@ -16,8 +15,8 @@ public class IngresoPracticaSeleniumEasyStep {
     }
 
     @Step
-    public void ingresarPracticaCamposTexto (){
+    public void ingresarPractica (String practica){
         ingresoPracticaSeleniumEasyPage.iniciarPractica();
-        ingresoPracticaSeleniumEasyPage.seleccionarPractica(EnumEjercicios.INPUT_FORMS.getValor());
+        ingresoPracticaSeleniumEasyPage.seleccionarPractica(practica);
     }
 }

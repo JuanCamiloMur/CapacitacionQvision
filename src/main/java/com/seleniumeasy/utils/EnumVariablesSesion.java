@@ -1,7 +1,7 @@
 package com.seleniumeasy.utils;
 
 public enum EnumVariablesSesion {
-    MENSAJE("mensaje-enviado");
+    RESULTADO_ESPERADO("resultado-mostrado");
 
     private String valor;
 
