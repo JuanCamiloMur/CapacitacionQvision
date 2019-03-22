@@ -1,11 +1,8 @@
 package com.seleniumeasy.steps.camposTexto;
 
 import com.seleniumeasy.pages.camposTexto.PracticaCamposTextoPage;
-import cucumber.api.DataTable;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
-
-import java.util.List;
 
 public class PracticaCamposTextoStep {
 
@@ -18,7 +15,19 @@ public class PracticaCamposTextoStep {
     }
 
     @Step
-    public void validarMensajeEnviado(){
-        practicaCamposTextoPage.validarMensaje();
+    public void validarMensaje(String operadorLogico){
+        practicaCamposTextoPage.validarResultadoMensaje(operadorLogico);
+    }
+
+    @Step
+    public void sumarNumerosEnteros(){
+        practicaCamposTextoPage.ingresarPrimerNumero();
+        practicaCamposTextoPage.ingresarSegundoNumero();
+        practicaCamposTextoPage.obtenerTotalSuma();
+    }
+
+    @Step
+    public void validarSuma(String operadorLogico){
+        practicaCamposTextoPage.validarResultadoSuma(operadorLogico);
     }
 }

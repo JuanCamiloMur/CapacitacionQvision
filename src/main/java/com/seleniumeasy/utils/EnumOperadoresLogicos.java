@@ -1,11 +1,13 @@
 package com.seleniumeasy.utils;
 
-public enum EnumEjercicios {
-    INPUT_FORMS("Simple Form Demo");
+public enum  EnumOperadoresLogicos {
+    MAYOR("Mayor"),
+    MENOR("Menor"),
+    IGUAL("Igual");
 
     private String valor;
 
-    private EnumEjercicios(String valor) {
+    private EnumOperadoresLogicos(String valor) {
         this.valor = valor;
     }
 

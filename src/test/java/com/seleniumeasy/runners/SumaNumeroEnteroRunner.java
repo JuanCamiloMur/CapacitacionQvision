@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/prueba_elementos_campos_texto.feature",
         glue = {"com.seleniumeasy.definitions"},
-        tags = "@envio_mensaje"
+        tags = "@suma_numeros_enteros"
 )
-public class EnvioMensajeRunner {
+public class SumaNumeroEnteroRunner {
 }
