@@ -6,9 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/prueba_elementos_campos_texto.feature",
-        glue = {"com.seleniumeasy.definitions"},
-        tags = "@envio_mensaje"
+        features = "src/test/resources/features/InputForms.feature",
+        glue = {"com.seleniumeasy.definitions"}
 )
-public class EnvioMensajeRunner {
+public class SimpleFormDemoRunner {
 }
