@@ -16,6 +16,15 @@ public class IngresoPracticaSeleniumEasyPage extends PageObject {
     @FindBy (xpath = ".//div[@class='board']")
     private WebElementFacade tblPractica;
 
+    @FindBy (xpath = ".//a[@id='btn_inter_example']")
+    private WebElementFacade btnNivelIntermedio;
+
+    @FindBy (xpath = ".//a[@id='btn_advanced_example']")
+    private  WebElementFacade btnNivelAvanzado;
+
+    @FindBy (xpath = ".//a[@id='btn_done_example']")
+    private  WebElementFacade btnTerminado;
+
     public IngresoPracticaSeleniumEasyPage(WebDriver wdriver) {
         super(wdriver);
     }
@@ -26,6 +35,15 @@ public class IngresoPracticaSeleniumEasyPage extends PageObject {
     }
 
     public void seleccionarPractica (String practica){
+        while(tblPractica.findElements(By.linkText(practica)).isEmpty()){
+            if(btnNivelIntermedio.isVisible()){
+                btnNivelIntermedio.waitUntilClickable().click();
+            }else if(btnNivelAvanzado.isVisible()){
+                btnNivelAvanzado.waitUntilClickable().click();
+            }else{
+                btnTerminado.waitUntilClickable().click();
+            }
+        }
         tblPractica.findBy(By.linkText(practica))
                 .waitUntilClickable()
                 .click();
