@@ -16,6 +16,6 @@ public class SelectDropdownListDefinition {
 
     @Entonces("^debe mostrar el dia seleccionado: (.*)$")
     public void validarMensajeDiaSeleccionado(String mensaje) {
-
+        selectDropdownListStep.validarDiaSeleccionado(mensaje);
     }
 }
