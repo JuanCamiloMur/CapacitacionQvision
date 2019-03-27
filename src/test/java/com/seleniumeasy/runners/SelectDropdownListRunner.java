@@ -6,9 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/prueba_elementos_campos_texto.feature",
-        glue = {"com.seleniumeasy.definitions"},
-        tags = "@suma_numeros_enteros"
+        features = "src/test/resources/features/SelectDropdownList.feature",
+        glue = {"com.seleniumeasy.definitions"}
 )
-public class SumaNumeroEnteroRunner {
+public class SelectDropdownListRunner {
 }

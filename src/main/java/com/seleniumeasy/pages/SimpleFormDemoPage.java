@@ -1,17 +1,12 @@
-package com.seleniumeasy.pages.camposTexto;
+package com.seleniumeasy.pages;
 
-import com.seleniumeasy.utils.EnumNumeros;
-import com.seleniumeasy.utils.EnumVariablesSesion;
 import com.seleniumeasy.utils.Utilidades;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.Enumeration;
-import java.util.Random;
-
-public class PracticaCamposTextoPage extends PageObject {
+public class SimpleFormDemoPage extends PageObject {
 
     @FindBy (xpath = ".//input[@id='user-message']")
     private WebElementFacade txtMensaje;
@@ -36,48 +31,44 @@ public class PracticaCamposTextoPage extends PageObject {
 
     private int primerNumero;
     private int segundoNumero;
+    private int suma;
 
     Utilidades utilidades;
-
-    Random random = new Random();
 
     public void ingresarMensaje(String mensaje){
         txtMensaje.waitUntilVisible();
         txtMensaje.sendKeys(mensaje);
-        Serenity.setSessionVariable(EnumVariablesSesion.RESULTADO_ESPERADO.getValor()).to(mensaje);
     }
 
     public void enviarMensaje(){
         btnEnviarMensaje.waitUntilClickable().click();
     }
 
-    public void ingresarPrimerNumero(){
-        this.primerNumero = random.nextInt(Integer.valueOf(EnumNumeros.NUMERO_100.getValor()));
+    public void ingresarPrimerNumero(String numero){
         txtPrimerNumero.waitUntilVisible();
-        txtPrimerNumero.sendKeys(Integer.toString(primerNumero));
+        txtPrimerNumero.sendKeys(numero);
+        this.primerNumero = Integer.parseInt(numero);
     }
 
-    public void ingresarSegundoNumero(){
-        this.segundoNumero = random.nextInt(Integer.valueOf(EnumNumeros.NUMERO_100.getValor()));
+    public void ingresarSegundoNumero(String numero){
         txtSegundoNumero.waitUntilVisible();
-        txtSegundoNumero.sendKeys(Integer.toString(segundoNumero));
+        txtSegundoNumero.sendKeys(numero);
+        this.segundoNumero = Integer.parseInt(numero);
     }
 
     public void obtenerTotalSuma(){
-        int suma = primerNumero + segundoNumero;
-        Serenity.setSessionVariable(EnumVariablesSesion.RESULTADO_ESPERADO.getValor()).to(Integer.toString(suma));
+        this.suma = primerNumero + segundoNumero;
         btnSumar.waitUntilClickable();
         btnSumar.click();
     }
 
-    public void validarResultadoMensaje (String operadorLogico){
-        utilidades.compararResultado(lblResultadoMensaje,
-                Serenity.sessionVariableCalled(EnumVariablesSesion.RESULTADO_ESPERADO.getValor()),operadorLogico);
+    public void validarResultadoMensaje (String mensaje){
+        utilidades.compararResultado(lblResultadoMensaje,mensaje);
     }
 
-    public void validarResultadoSuma (String operadorLogico){
-        utilidades.compararResultado(lblResultadoSuma,
-                Serenity.sessionVariableCalled(EnumVariablesSesion.RESULTADO_ESPERADO.getValor()),operadorLogico);
+    public void validarResultadoSuma (){
+        String valorEsperado = Integer.toString(suma);
+        utilidades.compararResultado(lblResultadoSuma, valorEsperado);
     }
 
 
