@@ -13,7 +13,7 @@ public class DataTableSearchPage extends PageObject {
     @FindBy (xpath = ".//table[@id='task-table']//tr[not(contains(@style,'display: none;'))]/td[2]")
     private WebElementFacade tblTask;
 
-    @FindBy (xpath = ".//table[@class='table']//tr[not(contains(@style,'display: none;'))]/td[2]")
+    @FindBy (xpath = ".//table[@class='table']//tr[not(contains(@style,'display: none;'))]/td")
     private WebElementFacade tblListaUsuario;
 
     @FindBy (xpath = ".//div[@class='pull-right']/button")

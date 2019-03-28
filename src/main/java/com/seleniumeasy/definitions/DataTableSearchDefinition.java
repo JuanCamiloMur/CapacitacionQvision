@@ -5,7 +5,7 @@ import cucumber.api.java.ast.Cuando;
 import cucumber.api.java.es.Entonces;
 import net.thucydides.core.annotations.Steps;
 
-public class DataTableSearchDefinitions {
+public class DataTableSearchDefinition {
 
     @Steps
     DataTableSearchStep dataTableSearchStep;

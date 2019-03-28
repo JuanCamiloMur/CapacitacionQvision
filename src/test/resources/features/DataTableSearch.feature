@@ -18,8 +18,8 @@
     Esquema del escenario: Busqueda de un dato en una tabla
       Dado ingreso a la practica Table Data Search
       Cuando busco el usuario: <Usuario>
-      Entonces me debe aparecer los datos del usuario: <Usuario>
+      Entonces me debe aparecer los datos del usuario: <Mensaje no encontrado>
 
       Ejemplos:
-        |Usuario  |
-        |chrisford|
+        |Usuario     |Mensaje no encontrado|
+        |JavierGarzas|No result found      |

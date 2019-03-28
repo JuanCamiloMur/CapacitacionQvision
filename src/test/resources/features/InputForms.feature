@@ -2,7 +2,7 @@
 
   Característica: Categoría Input Forms
 
-    La etiqueta inputespecifica un campo de entrada donde el usuario puede ingresar datos.
+    La etiqueta input especifica un campo de entrada donde el usuario puede ingresar datos.
 
     @seleniumeasy
     Esquema del escenario: Demostracion de campo de texto

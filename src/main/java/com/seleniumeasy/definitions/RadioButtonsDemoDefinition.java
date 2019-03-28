@@ -5,7 +5,7 @@ import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 import net.thucydides.core.annotations.Steps;
 
-public class RadioButtonsDemoDefinitions {
+public class RadioButtonsDemoDefinition {
 
     @Steps RadioButtonsDemoStep radioButtonsDemoStep;
 
