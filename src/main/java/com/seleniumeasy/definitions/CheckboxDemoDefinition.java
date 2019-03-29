@@ -7,16 +7,15 @@ import net.thucydides.core.annotations.Steps;
 
 public class CheckboxDemoDefinition {
 
-    @Steps
-    CheckboxDemoStep checkBoxDemoStep;
+  @Steps CheckboxDemoStep checkBoxDemoStep;
 
-    @Cuando("^selecciono el CheckBox$")
-    public void seleccionarCheckbox(){
-        checkBoxDemoStep.seleccionarCheckbox();
-    }
+  @Cuando("^selecciono el CheckBox$")
+  public void seleccionarCheckbox() {
+    checkBoxDemoStep.seleccionarCheckbox();
+  }
 
-    @Entonces("^me debe mostrar el mensaje (.*) en pantalla$")
-    public void validarMensajeMostradoPantalla(String mensaje){
-        checkBoxDemoStep.validarMensajeMostradoPantalla(mensaje);
-    }
+  @Entonces("^me debe mostrar el mensaje (.*) en pantalla$")
+  public void validarMensajeMostradoPantalla(String mensaje) {
+    checkBoxDemoStep.validarMensajeMostradoPantalla(mensaje);
+  }
 }

@@ -7,15 +7,15 @@ import net.thucydides.core.annotations.Steps;
 
 public class RadioButtonsDemoDefinition {
 
-    @Steps RadioButtonsDemoStep radioButtonsDemoStep;
+  @Steps RadioButtonsDemoStep radioButtonsDemoStep;
 
-    @Cuando("^selecciono el Radio Button (.*)$")
-    public void seleccionarRadioButton(String boton) {
-        radioButtonsDemoStep.seleccionarRadioButtons(boton);
-    }
+  @Cuando("^selecciono el Radio Button (.*)$")
+  public void seleccionarRadioButton(String genero) {
+    radioButtonsDemoStep.seleccionarRadioButtons(genero);
+  }
 
-    @Entonces("^debe mostrar el siguiente mesaje: (.*)$")
-    public void MesajeValidacion(String mensaje) {
-        radioButtonsDemoStep.validarMensajeMostradoPantalla(mensaje);
-    }
+  @Entonces("^debe mostrar un mensaje con el genero seleecionado: (.*)$")
+  public void mensajeValidacion(String genero) {
+    radioButtonsDemoStep.validarMensajeMostradoPantalla(genero);
+  }
 }

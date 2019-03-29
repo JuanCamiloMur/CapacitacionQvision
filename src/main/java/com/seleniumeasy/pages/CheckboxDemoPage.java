@@ -6,20 +6,20 @@ import org.openqa.selenium.support.FindBy;
 
 public class CheckboxDemoPage extends Utilidades {
 
-    @FindBy (xpath = ".//input[@id='isAgeSelected']")
-    private WebElementFacade chkMensaje;
+  @FindBy(xpath = ".//input[@id='isAgeSelected']")
+  private WebElementFacade chkMensaje;
 
-    @FindBy (xpath = ".//div[@id='txtAge']")
-    private WebElementFacade lblMensajePantalla;
+  @FindBy(xpath = ".//div[@id='txtAge']")
+  private WebElementFacade lblMensajePantalla;
 
-    Utilidades utilidades;
+  Utilidades utilidades;
 
-    public void seleccionarCheckbox () {
-        chkMensaje.waitUntilClickable();
-        chkMensaje.click();
-    }
+  public void seleccionarCheckbox() {
+    chkMensaje.waitUntilClickable();
+    chkMensaje.click();
+  }
 
-    public void validarMensajeMostradoPantalla(String mensaje){
-        utilidades.compararResultado(lblMensajePantalla,mensaje);
-    }
+  public void validarMensajeMostradoPantalla(String mensaje) {
+    utilidades.compararResultado(lblMensajePantalla, mensaje);
+  }
 }

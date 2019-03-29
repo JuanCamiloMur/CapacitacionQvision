@@ -6,8 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/DataTableSearch.feature",
-        glue = {"com.seleniumeasy.definitions"}
+  features = "src/test/resources/features/DataTableSearch.feature",
+  glue = {"com.seleniumeasy.definitions"}
 )
-public class DataTableSearchRunner {
-}
+public class DataTableSearchRunner {}

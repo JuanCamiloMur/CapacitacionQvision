@@ -5,10 +5,14 @@ import org.fluentlenium.core.annotation.Page;
 
 public class JavascriptAlertsStep {
 
-    @Page JavascriptAlertsPage javascriptAlertsPage;
+  @Page JavascriptAlertsPage javascriptAlertsPage;
 
-    public void ingresoNombrePromptAlert(String nombre){
-        javascriptAlertsPage.activarPromptAlert();
-        javascriptAlertsPage.ingresarNombrePromptAlert(nombre);
-    }
+  public void ingresoNombrePromptAlert(String palabra) {
+    javascriptAlertsPage.activarPromptAlert();
+    javascriptAlertsPage.ingresarNombrePromptAlert(palabra);
+  }
+
+  public void validarMensajeMostrado(String palabra) {
+    javascriptAlertsPage.validarMensaje(palabra);
+  }
 }

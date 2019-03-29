@@ -7,9 +7,9 @@
   @seleniumeasy
   Esquema del escenario: Java Script Alert Box
     Dado ingreso a la practica Javascript Alerts
-    Cuando ingreso el nombre: <Nombre> en el prompt box
-    Entonces debe aparecer un mensaje con el nombre: <Nombre>
+    Cuando ingreso la palabra: <Palabra> en el prompt box
+    Entonces debe aparecer un mensaje con la palabra: <Palabra>
 
     Ejemplos:
-    | Nombre                   |
-    | Juan Camilo Murcia Ramos |
+    | Palabra                 |
+    | Refuerzo Automatizacion |
