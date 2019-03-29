@@ -13,5 +13,5 @@
     Entonces me debe mostrar el mensaje <Mensaje esperado> en pantalla
 
     Ejemplos:
-    |       Mensaje esperado       |
-    |Success - Check box is checked|
+    |        Mensaje esperado        |
+    | Success - Check box is checked |

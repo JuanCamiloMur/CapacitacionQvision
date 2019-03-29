@@ -1,42 +1,45 @@
 package com.seleniumeasy.definitions;
 
-import com.seleniumeasy.steps.IngresoPracticaSeleniumEasyStep;
+import com.seleniumeasy.steps.SeleniumEasyTestStep;
 import com.seleniumeasy.steps.SimpleFormDemoStep;
+import cucumber.api.DataTable;
 import cucumber.api.java.ast.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
+import java.util.List;
 import net.thucydides.core.annotations.Steps;
 
 public class SimpleFormDemoDefinition {
 
-    @Steps IngresoPracticaSeleniumEasyStep ingresoPracticaSeleniumEasyStep;
+  @Steps SeleniumEasyTestStep seleniumEasyTestStep;
 
-    @Steps
-    SimpleFormDemoStep simpleFormDemoStep;
+  @Steps SimpleFormDemoStep simpleFormDemoStep;
 
-    @Dado("^ingreso a la practica (.*)$")
-    public void realizarPractica (String practica) {
-        ingresoPracticaSeleniumEasyStep.ingresarPractica(practica);
-    }
+  private List<String> numerosEnteros;
 
-    @Cuando("^ingreso los numeros: (.*), (.*)$")
-    public void sumaEnteros(String primerNumero, String segundoNumero) {
-        simpleFormDemoStep.sumarNumerosEnteros(primerNumero, segundoNumero);
-    }
+  @Dado("^ingreso a la practica (.*)$")
+  public void realizarPractica(String practica) {
+    seleniumEasyTestStep.ingresarPractica(practica);
+  }
 
-    @Cuando("^envio el mensaje (.*)$")
-    public void envioMensaje(String mensaje)  {
-        simpleFormDemoStep.enviarMensaje(mensaje);
-    }
+  @Cuando("^ingreso los numeros:$")
+  public void sumaEnteros(DataTable numeros) {
+    this.numerosEnteros = numeros.asList(String.class);
+    simpleFormDemoStep.sumarNumerosEnteros(numerosEnteros);
+  }
 
-    @Entonces("^el mensaje (.*) debe mostrase en pantalla$")
-    public void validacionMensajeEnviadoCorrectamentePantalla(String mensaje)  {
-        simpleFormDemoStep.validarMensaje(mensaje);
-    }
+  @Cuando("^envio el mensaje (.*)$")
+  public void envioMensaje(String mensaje) {
+    simpleFormDemoStep.enviarMensaje(mensaje);
+  }
 
-    @Entonces("^el resultado debe mostrase en pantalla$")
-    public void validacionResultadoCorrectamentePantalla()  {
-        simpleFormDemoStep.validarSuma();
-    }
+  @Entonces("^el mensaje (.*) debe mostrase en pantalla$")
+  public void validacionMensajeEnviadoCorrectamentePantalla(String mensaje) {
+    simpleFormDemoStep.validarMensaje(mensaje);
+  }
 
+  @Entonces("^el resultado debe mostrase en pantalla$")
+  public void validacionResultadoCorrectamentePantalla() {
+    simpleFormDemoStep.validarSuma();
+  }
 }

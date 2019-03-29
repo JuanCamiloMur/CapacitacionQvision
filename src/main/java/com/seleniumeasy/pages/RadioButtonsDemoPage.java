@@ -8,23 +8,27 @@ import org.openqa.selenium.support.FindBy;
 
 public class RadioButtonsDemoPage extends PageObject {
 
-    @FindBy(xpath = ".//*[@id='easycont']/div/div[2]/div[1]/div[2]")
-    private WebElementFacade contenedorRbtDemo;
+  @FindBy(xpath = ".//*[@id='easycont']/div/div[2]/div[1]/div[2]")
+  private WebElementFacade contenedorRbtDemo;
 
-    @FindBy(xpath = ".//p[@class='radiobutton']")
-    private WebElementFacade lblMensajeValidacion;
+  @FindBy(xpath = ".//p[@class='radiobutton']")
+  private WebElementFacade lblMensajeValidacion;
 
-    @FindBy(id = "buttoncheck")
-    private WebElementFacade btnVerificarValor;
+  @FindBy(id = "buttoncheck")
+  private WebElementFacade btnVerificarValor;
 
-    Utilidades utilidades;
+  Utilidades utilidades;
 
-    public void selecionarRadioBoton(String boton){
-        contenedorRbtDemo.findBy(By.xpath("//label[contains(text(),'"+boton+"')]")).waitUntilClickable().click();
-        btnVerificarValor.waitUntilClickable().click();
-    }
+  public void selecionarRadioBoton(String genero) {
+    contenedorRbtDemo
+        .findBy(By.xpath("//label[contains(text(),'" + genero + "')]"))
+        .waitUntilClickable()
+        .click();
+    btnVerificarValor.waitUntilClickable().click();
+  }
 
-    public void validarMensajeValidacion(String mensaje){
-        utilidades.compararResultado(lblMensajeValidacion,mensaje);
-    }
+  public void validarMensajeValidacion(String genero) {
+    String mensajeMostrado = "Radio button '" + genero + "' is checked";
+    utilidades.compararResultado(lblMensajeValidacion, mensajeMostrado);
+  }
 }

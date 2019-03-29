@@ -5,14 +5,13 @@ import org.fluentlenium.core.annotation.Page;
 
 public class CheckboxDemoStep {
 
-    @Page
-    CheckboxDemoPage checkBoxDemoPage;
+  @Page CheckboxDemoPage checkBoxDemoPage;
 
-    public void seleccionarCheckbox(){
-        checkBoxDemoPage.seleccionarCheckbox();
-    }
+  public void seleccionarCheckbox() {
+    checkBoxDemoPage.seleccionarCheckbox();
+  }
 
-    public void validarMensajeMostradoPantalla(String mensaje){
-        checkBoxDemoPage.validarMensajeMostradoPantalla(mensaje);
-    }
+  public void validarMensajeMostradoPantalla(String mensaje) {
+    checkBoxDemoPage.validarMensajeMostradoPantalla(mensaje);
+  }
 }

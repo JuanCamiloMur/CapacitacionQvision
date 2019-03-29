@@ -7,20 +7,21 @@ import org.openqa.selenium.support.FindBy;
 
 public class SelectDropdownListPage extends PageObject {
 
-    @FindBy(xpath = ".//select[@class='form-control']")
-    private WebElementFacade cmbDiaSemana;
+  @FindBy(xpath = ".//select[@class='form-control']")
+  private WebElementFacade cmbDiaSemana;
 
-    @FindBy(xpath = ".//p[@class='selected-value']")
-    private WebElementFacade lblMensajeDiaSemana;
+  @FindBy(xpath = ".//p[@class='selected-value']")
+  private WebElementFacade lblMensajeDiaSemana;
 
-    Utilidades utilidades;
+  Utilidades utilidades;
 
-    public void seleccionarDiaSemana(String dia){
-        cmbDiaSemana.waitUntilVisible();
-        cmbDiaSemana.selectByValue(dia);
-    }
+  public void seleccionarDiaSemana(String dia) {
+    cmbDiaSemana.waitUntilVisible();
+    cmbDiaSemana.selectByValue(dia);
+  }
 
-    public void validarMensajeDiaSemana(String mensaje){
-        utilidades.compararResultado(lblMensajeDiaSemana,mensaje);
-    }
+  public void validarMensajeDiaSemana(String dia) {
+    String mensajeMostrado = "Day selected :- " + dia + "";
+    utilidades.compararResultado(lblMensajeDiaSemana, mensajeMostrado);
+  }
 }
