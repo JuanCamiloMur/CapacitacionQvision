@@ -8,9 +8,9 @@
   Esquema del escenario: Demostracion de lista de seleccion
     Dado ingreso a la practica Select Dropdown List
     Cuando seleciono el dia: <Dia>
-    Entonces debe mostrar el dia seleccionado: Day selected :- <Dia>
+    Entonces debe mostrar un mensaje con el dia seleccionado: <Dia>
 
     Ejemplos:
-    |    Dia    |
-    |  Sunday   |
+    |  Dia   |
+    | Sunday |
 

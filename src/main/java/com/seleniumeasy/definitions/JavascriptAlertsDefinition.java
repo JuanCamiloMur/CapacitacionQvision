@@ -7,16 +7,15 @@ import net.thucydides.core.annotations.Steps;
 
 public class JavascriptAlertsDefinition {
 
-    @Steps JavascriptAlertsStep javascriptAlertsStep;
+  @Steps JavascriptAlertsStep javascriptAlertsStep;
 
-    @Cuando("^ingreso el nombre: (.*) en el prompt box$")
-    public void ingresoNombreAlertaJavascript(String nomnbre) {
-        javascriptAlertsStep.ingresoNombrePromptAlert(nomnbre);
-    }
+  @Cuando("^ingreso la palabra: (.*) en el prompt box$")
+  public void ingresoNombreAlertaJavascript(String palabra) {
+    javascriptAlertsStep.ingresoNombrePromptAlert(palabra);
+  }
 
-    @Entonces("^debe aparecer un mensaje con el nombre: (.*)$")
-    public void validacionNombre() throws Exception {
-
-    }
-
+  @Entonces("^debe aparecer un mensaje con la palabra: (.*)$")
+  public void validacionNombre(String palabra) {
+    javascriptAlertsStep.validarMensajeMostrado(palabra);
+  }
 }

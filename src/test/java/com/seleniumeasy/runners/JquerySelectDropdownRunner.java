@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-  features = "src/test/resources/features/SelectDropdownList.feature",
+  features = "src/test/resources/features/JquerySelectDropdown.feature",
   glue = {"com.seleniumeasy.definitions"}
 )
-public class SelectDropdownListRunner {}
+public class JquerySelectDropdownRunner {}

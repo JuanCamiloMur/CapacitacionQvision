@@ -15,11 +15,8 @@
       | Como fue!!! |
 
     @seleniumeasy
-    Esquema del escenario: Demostracion de suma con dos campos de texto
+    Escenario: Demostracion de suma con dos campos de texto
       Dado ingreso a la practica Simple Form Demo
-      Cuando ingreso los numeros: <Primer numero>, <Segundo numero>
+      Cuando ingreso los numeros:
+        | 50 | 80 |
       Entonces el resultado debe mostrase en pantalla
-
-      Ejemplos:
-      |Primer numero|Segundo numero|
-      |     50      |     80       |

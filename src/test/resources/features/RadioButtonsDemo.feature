@@ -8,8 +8,8 @@
   Esquema del escenario: Demostración del Radio Button
     Dado ingreso a la practica Radio Buttons Demo
     Cuando selecciono el Radio Button <Genero>
-    Entonces debe mostrar el siguiente mesaje: Radio button '<Genero>' is checked
+    Entonces debe mostrar un mensaje con el genero seleecionado: <Genero>
 
     Ejemplos:
-      |Genero|
-      |Female|
+      | Genero |
+      | Female |

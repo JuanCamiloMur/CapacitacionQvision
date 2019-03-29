@@ -5,14 +5,13 @@ import org.fluentlenium.core.annotation.Page;
 
 public class RadioButtonsDemoStep {
 
-    @Page
-    RadioButtonsDemoPage radioButtonsDemoPage;
+  @Page RadioButtonsDemoPage radioButtonsDemoPage;
 
-    public void seleccionarRadioButtons(String boton){
-        radioButtonsDemoPage.selecionarRadioBoton(boton);
-    }
+  public void seleccionarRadioButtons(String genero) {
+    radioButtonsDemoPage.selecionarRadioBoton(genero);
+  }
 
-    public void validarMensajeMostradoPantalla(String mensaje){
-        radioButtonsDemoPage.validarMensajeValidacion(mensaje);
-    }
+  public void validarMensajeMostradoPantalla(String genero) {
+    radioButtonsDemoPage.validarMensajeValidacion(genero);
+  }
 }
