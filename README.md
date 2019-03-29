@@ -1,3 +1,11 @@
+# Capacitacion Qvision
+
+# Recomendacion
+
+• Por favor al descargar el proyecto la ubicacion del webDriver configurada desde serenity.properties debe ser esta "webdriver.chrome.driver = C://chromedriver.exe", para el buen funcionamiento del proyecto.
+
+• Tambien en caso de que su cumputador sea linux hay una rama llama "Linux" descarguela, en esta rama el chrome Driver esta configurado en la raiz del proyecto para que este sea mas facil de configurar.
+
 # Ejecicio Final
 
 URL: https://www.seleniumeasy.com/test/
