@@ -10,4 +10,6 @@ public class SelectDropdownListStep {
     public void seleccionarDiaSemana(String dia){
         selectDropdownListPage.seleccionarDiaSemana(dia);
     }
+
+    public void validarDiaSeleccionado(String mensaje){selectDropdownListPage.validarMensajeDiaSemana(mensaje);}
 }

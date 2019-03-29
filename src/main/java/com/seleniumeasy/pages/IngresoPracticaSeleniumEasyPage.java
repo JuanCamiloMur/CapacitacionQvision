@@ -4,7 +4,6 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 @DefaultUrl("https://www.seleniumeasy.com/test/")
@@ -24,10 +23,6 @@ public class IngresoPracticaSeleniumEasyPage extends PageObject {
 
     @FindBy (xpath = ".//a[@id='btn_done_example']")
     private  WebElementFacade btnTerminado;
-
-    public IngresoPracticaSeleniumEasyPage(WebDriver wdriver) {
-        super(wdriver);
-    }
 
     public void iniciarPractica (){
         tblPractica.waitUntilVisible();
